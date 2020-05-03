@@ -1,0 +1,11 @@
+indexes:
+  - image: devrt/simulator-empty
+    description: >
+      Empty simulator image. Only roscore process will be launched.
+    distribution: melodic
+    url: https://hub.docker.com/r/devrt/simulator-empty
+  - image: devrt/simulator-turtlebot3
+    description: >
+      turtlebot3 simulator image.
+    distribution: melodic
+    url: https://hub.docker.com/r/devrt/simulator-turtlebot3
