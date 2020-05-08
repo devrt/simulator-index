@@ -1,6 +1,6 @@
 #!/bin/sh
 
-IMAGE=`yq r /index.yaml 'indexes.*.image' | fzf --preview "yq r /index.yaml 'indexes.(image=={})'"`
+IMAGE=`yq r /index.yaml 'simulators.*.image' | fzf --preview "yq r /index.yaml 'simulators.(image=={})'"`
 echo "Updating docker-compose.yml to use ${IMAGE} simulation container..."
 yq w -i /work/docker-compose.yml services.simulator.image $IMAGE
 echo "done."
